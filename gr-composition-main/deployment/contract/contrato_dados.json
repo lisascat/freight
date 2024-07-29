@@ -1,0 +1,62 @@
+{
+    "type": "object",
+    "properties": {
+        "trucker": {
+            "type": "object",
+            "properties": {
+                "person_uuid": {
+                    "type": "string",
+                    "pattern": "(^[a-z0-9]{8}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{12}$)"
+                },
+                "document": {
+                    "type": "string",
+                    "pattern": "([0-9]{11})$"
+                }
+            }
+        },
+        "vehicles": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "plate": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "proprietary_vehicle": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "rntrc": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "rntrc_state": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "proprietary_rntrc": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "rntrc_registration_date": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

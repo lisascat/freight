@@ -1,0 +1,26 @@
+{
+    "trucker": {
+      "person_uuid": "dc6e0435-9991-421e-a982-26c6391a4868",
+      "document": "69992397805"
+    },
+    "vehicles": [
+      {
+        "plate": "62WFW01",
+        "proprietary_vehicle": "69992397805",
+        "rntrc": "567890",
+        "rntrc_state": "SP",
+        "proprietary_rntrc": "69992397805",
+        "rntrc_registration_date": "2000-01-18"
+      },
+      {
+        "plate": "D16440Z",
+        "proprietary_vehicle": "69992397805",
+        "rntrc": "567890",
+        "rntrc_state": "PR",
+        "proprietary_rntrc": "69992397805",
+        "rntrc_registration_date": "2023-08-09"
+      }
+    ],
+    "request_date": "2023-11-01"
+    
+  }

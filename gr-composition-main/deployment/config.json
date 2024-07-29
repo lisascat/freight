@@ -1,0 +1,13 @@
+{
+    "deploy":{
+        "variantes":[
+           {
+              "VariantName":"AllTrafic",
+              "ServerlessConfig": {
+                  "MemorySizeInMB": 3072,
+                  "MaxConcurrency": 10
+              }
+           }
+        ]
+    }
+}

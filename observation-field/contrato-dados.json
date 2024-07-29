@@ -1,0 +1,134 @@
+{
+    "type": "object",
+    "properties": {
+        "data": {
+            "type": "object",
+            "properties": {
+                "cargo": {
+                    "type": "object",
+                    "properties": {
+                        "kind": {
+                            "type": "string"
+                        },
+                        "product": {
+                            "type": "string"
+                        },
+                        "measurements": {
+                            "type": "object",
+                            "properties": {
+                                "width": { "type": ["number", "null"] },
+                                "height": { "type": ["number", "null"] },
+                                "length": { "type": ["number", "null"] },
+                                "volume": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cubic": { "type": ["number", "null"] },
+                                        "weight": { "type": ["number", "null"] },
+                                        "quantity": { "type": ["number", "null"] },
+                                        "dimension": { "type": ["number", "null"] }
+                                    }
+                                },
+                                "weight": {
+                                    "type": "object",
+                                    "properties": {
+                                        "unit": { "type": ["string", "null"] },
+                                        "cubic": { "type": ["number", "null"] },
+                                        "total": { "type": ["number", "null"] }
+                                    }
+                                }
+                            }
+                        },
+                        "product_ncm_position": { "type": ["string", "null"] }
+                    },
+                    "required": [
+                        "kind",
+                        "product",
+                        "measurements"
+                    ]
+                },
+                "vehicles": {
+                    "type": "object",
+                    "properties": {
+                        "types": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "category": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "id",
+                                    "name",
+                                    "category"
+                                ]
+                            }
+                        },
+                        "bodies": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "category": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "id",
+                                    "name",
+                                    "category"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "types",
+                        "bodies"
+                    ]
+                },
+                "identifiers": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        },
+                        "code": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "code"
+                    ]
+                },
+                "observations": {
+                    "type": ["string", "null"]
+                }
+            },
+            "required": [
+                "cargo",
+                "vehicles",
+                "identifiers",
+                "observations"
+            ]
+        }
+    },
+    "required": [
+        "data"
+    ]
+}
